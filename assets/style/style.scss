@@ -2,8 +2,10 @@
   --primary-text-color: #ffffff;
   --secondary-text-color: #cccccc;
   --tertiary-text-color: #111111;
-  --quaternary-text-color: #777777;
-  --quinary-text-color: #999999;
+  --quaternary-text-color: #555555;
+  --quinary-text-color: #777777;
+  --senary-text-color: #999999;
+
 }
 
 *,
@@ -163,4 +165,58 @@ section.partners {
 section.partners .partner-list {
   display: flex;
   justify-content: space-between;
+}
+
+section {
+  &.collection {
+    margin-top: 53px;
+
+    & .secondary-title {
+      color: #ffffff;
+    }
+
+    & .primary-para {
+      color: var(--quaternary-text-color);
+    }
+
+    & span {
+      position: relative;
+    }
+
+    & span::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5px 19.35px;
+      border-bottom: 1px solid var(--quaternary-text-color);
+    }
+
+    & .collection-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 127px 1fr;
+      column-gap: 18px;
+      margin-top: 25px;
+      overflow: hidden;
+
+      & .collection-list-item {
+        display: flex;
+        justify-content: center;
+        background-color: var(--tertiary-text-color);
+        border-top-right-radius: 7.3px;
+        border-top-left-radius: 7.3px;
+        padding-top: 10px;
+
+        & img {
+          display: block;
+          width: 70px;
+        }
+
+        &:nth-of-type(2n) {
+          background-color: var(--quaternary-text-color);
+        }
+      }
+    }
+  }
 }
