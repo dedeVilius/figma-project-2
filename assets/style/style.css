@@ -175,10 +175,10 @@ section.collection .secondary-title {
 section.collection .primary-para {
   color: var(--quaternary-text-color);
 }
-section.collection span {
+section.collection span.underline {
   position: relative;
 }
-section.collection span::after {
+section.collection span.underline::after {
   content: "";
   position: absolute;
   top: 0;
@@ -187,26 +187,25 @@ section.collection span::after {
   border-bottom: 1px solid var(--quaternary-text-color);
 }
 section.collection .collection-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 127px 1fr;
-  -moz-column-gap: 18px;
-       column-gap: 18px;
   margin-top: 25px;
-  overflow: hidden;
+  display: flex;
+  gap: 10px;
 }
 section.collection .collection-list .collection-list-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 127px 1fr;
+  justify-content: center;
+  width: calc((100% - 10px) / 2);
+}
+section.collection .collection-list .collection-list-item:nth-of-type(2n) > .item-image {
+  background-color: var(--quaternary-text-color);
+}
+section.collection .collection-list .collection-list-item .item-image {
   display: flex;
   justify-content: center;
-  background-color: var(--tertiary-text-color);
+  padding-top: 5px;
   border-top-right-radius: 7.3px;
   border-top-left-radius: 7.3px;
-  padding-top: 10px;
-}
-section.collection .collection-list .collection-list-item img {
-  display: block;
-  width: 70px;
-}
-section.collection .collection-list .collection-list-item:nth-of-type(2n) {
-  background-color: var(--quaternary-text-color);
+  background-color: var(--tertiary-text-color);
 }/*# sourceMappingURL=style.css.map */

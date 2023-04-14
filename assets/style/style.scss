@@ -10,7 +10,7 @@
 
 *,
 *::before,
-*::after { 
+*::after {
   box-sizing: border-box;
 }
 
@@ -78,7 +78,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 50px; 
+  border-radius: 50px;
   border: 2px solid transparent;
   background: linear-gradient(45deg, #FF3998, #FF8139, #FF3939) border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
@@ -148,8 +148,8 @@ section.sign-up {
 }
 
 section.sign-up .content-wrapper {
-  background: rgb(255,57,152);
-  background: linear-gradient(45deg, rgba(255,57,152,1) 1%, rgba(255,57,57,1) 27%, rgba(255,129,57,1) 75%, rgba(57,255,160,1) 100%);
+  background: rgb(255, 57, 152);
+  background: linear-gradient(45deg, rgba(255, 57, 152, 1) 1%, rgba(255, 57, 57, 1) 27%, rgba(255, 129, 57, 1) 75%, rgba(57, 255, 160, 1) 100%);
   padding: 70px 30px 30px;
   border-radius: 7px;
 }
@@ -179,11 +179,11 @@ section {
       color: var(--quaternary-text-color);
     }
 
-    & span {
+    & span.underline {
       position: relative;
     }
 
-    & span::after {
+    & span.underline::after {
       content: "";
       position: absolute;
       top: 0;
@@ -193,28 +193,28 @@ section {
     }
 
     & .collection-list {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 127px 1fr;
-      column-gap: 18px;
       margin-top: 25px;
-      overflow: hidden;
+      display: flex;
+      gap: 10px;
 
       & .collection-list-item {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 127px 1fr;
         justify-content: center;
-        background-color: var(--tertiary-text-color);
-        border-top-right-radius: 7.3px;
-        border-top-left-radius: 7.3px;
-        padding-top: 10px;
+        width: calc((100% - 10px) / 2);
 
-        & img {
-          display: block;
-          width: 70px;
+        &:nth-of-type(2n)>.item-image {
+          background-color: var(--quaternary-text-color);
         }
 
-        &:nth-of-type(2n) {
-          background-color: var(--quaternary-text-color);
+        & .item-image {
+          display: flex;
+          justify-content: center;
+          padding-top: 5px;
+          border-top-right-radius: 7.3px;
+          border-top-left-radius: 7.3px;
+          background-color: var(--tertiary-text-color);
         }
       }
     }
