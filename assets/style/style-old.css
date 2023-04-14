@@ -8,7 +8,7 @@
 
 *,
 *::before,
-*::after {
+*::after { 
   box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
   background-color: #000000;
   margin: 0;
@@ -76,7 +76,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 50px;
+  border-radius: 50px; 
   border: 2px solid transparent;
   background: linear-gradient(45deg, #FF3998, #FF8139, #FF3939) border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
@@ -146,8 +146,8 @@ section.sign-up {
 }
 
 section.sign-up .content-wrapper {
-  background: rgb(255, 57, 152);
-  background: linear-gradient(45deg, rgb(255, 57, 152) 1%, rgb(255, 57, 57) 27%, rgb(255, 129, 57) 75%, rgb(57, 255, 160) 100%);
+  background: rgb(255,57,152);
+  background: linear-gradient(45deg, rgba(255,57,152,1) 1%, rgba(255,57,57,1) 27%, rgba(255,129,57,1) 75%, rgba(57,255,160,1) 100%);
   padding: 70px 30px 30px;
   border-radius: 7px;
 }
@@ -163,4 +163,4 @@ section.partners {
 section.partners .partner-list {
   display: flex;
   justify-content: space-between;
-}/*# sourceMappingURL=style.css.map */
+}
