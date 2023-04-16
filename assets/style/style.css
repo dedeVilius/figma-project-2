@@ -23,7 +23,6 @@ body {
   font-size: 1.6rem;
   background-color: var(--tertiary-text-color);
   margin: 0;
-  zoom: 150%;
 }
 
 .container {
@@ -182,13 +181,15 @@ section.partners .partner-list {
   justify-content: space-between;
 }
 
+section.collection hr,
+section.newsletter hr {
+  margin-top: 55px;
+  border: 1px solid var(--quaternary-text-color);
+}
+
 section.collection {
   overflow: hidden;
   margin-top: 53px;
-}
-section.collection .container {
-  padding-bottom: 55px;
-  border-bottom: 1px solid var(--quaternary-text-color);
 }
 section.collection .secondary-title {
   color: #ffffff;
@@ -288,8 +289,6 @@ section.newsletter .container {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right 72px center;
-  padding-bottom: 55px;
-  border-bottom: 1px solid var(--quaternary-text-color);
 }
 section.newsletter .text-block {
   width: 43%;
@@ -380,10 +379,8 @@ footer .content-wrapper .col-2 .row-2 p.primary-para::after {
 
 @media only screen and (max-width: 910px) {
   .container {
-    padding: 10px;
+    padding: 0 24px;
   }
-}
-@media only screen and (max-width: 891px) {
   header .hero-section {
     background-size: auto 220px, 200px 200px;
     background-repeat: no-repeat;
@@ -391,23 +388,30 @@ footer .content-wrapper .col-2 .row-2 p.primary-para::after {
     display: flex;
     margin-top: 83px;
   }
+  header .hero-section .text-block {
+    width: 50%;
+  }
+  section.collection .collection-list .collection-list-item {
+    width: 128px;
+  }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
   body {
     background-color: #ffffff;
   }
-  .container {
-    padding: 24px;
-  }
   header .container {
     background-image: url(../img/hero-image.png), url(../img/hero-graphic.svg);
-    background-size: 35%, 40%;
+    background-size: 120px, 200px;
     background-repeat: no-repeat;
-    background-position: right -40px top 35px, right -20px center;
+    background-position: right -40px top 50px, right -70px top 80px;
   }
-  header .content-wrapper .logo svg path,
-  footer .content-wrapper svg path {
-    fill: var(--tertiary-text-color);
+  section.collection hr,
+  section.newsletter hr {
+    display: none;
+  }
+  header .content-wrapper .logo img,
+  footer .content-wrapper .logo img {
+    filter: invert(1);
   }
   header .content-wrapper .responsive-nav {
     display: block;
@@ -463,14 +467,15 @@ footer .content-wrapper .col-2 .row-2 p.primary-para::after {
     display: flex;
     justify-content: center;
   }
-  section.partners .partner-list .partner-list-item:last-of-type {
-    grid-column: 1/3;
-  }
   section.partners .partner-list .partner-list-item img {
     zoom: 120%;
   }
   section.collection {
     margin-top: 41px;
+  }
+  section.collection .container {
+    border-bottom: 1px solid var(--secondary-text-color);
+    padding-bottom: 55px;
   }
   section.collection .secondary-title {
     color: var(--tertiary-text-color);
@@ -515,7 +520,7 @@ footer .content-wrapper .col-2 .row-2 p.primary-para::after {
     color: var(--tertiary-text-color);
   }
   section.newsletter .container {
-    background-size: 40%;
+    background-size: 140px;
     background-repeat: no-repeat;
     background-position: right -20px bottom 0;
     padding-bottom: 55px;
