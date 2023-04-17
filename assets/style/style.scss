@@ -237,6 +237,10 @@ section {
           border-top-right-radius: 7.3px;
           border-top-left-radius: 7.3px;
           background-color: var(--quinary-text-color);
+
+          & img {
+            object-fit: contain;
+          }
         }
 
         & .item-properties {
@@ -469,7 +473,7 @@ footer {
     display: none;
   }
 
-  header .content-wrapper .logo img ,
+  header .content-wrapper .logo img,
   footer .content-wrapper .logo img {
     filter: invert(1);
   }
