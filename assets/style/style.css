@@ -23,6 +23,7 @@ body {
   font-size: 1.6rem;
   background-color: var(--tertiary-text-color);
   margin: 0;
+  zoom: 150%;
 }
 
 .container {
@@ -395,7 +396,7 @@ footer .content-wrapper .col-2 .row-2 p.primary-para::after {
     width: 128px;
   }
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 799px) {
   body {
     background-color: #ffffff;
   }

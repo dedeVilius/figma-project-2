@@ -22,6 +22,7 @@ body {
   font-size: 1.6rem;
   background-color: var(--tertiary-text-color);
   margin: 0;
+  zoom: 150%;
 }
 
 .container {
@@ -451,7 +452,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 799px) {
   body {
     background-color: #ffffff;
   }
