@@ -605,7 +605,12 @@ footer {
   }
 
   section.newsletter .text-block {
-    width: 70%;
+    width: 65%;
+  }
+
+  section.newsletter .text-block p.primary-para {
+    font-size: 1.3rem;
+    color: var(--quaternary-text-color);
   }
 
   section.newsletter .text-block .secondary-title {
