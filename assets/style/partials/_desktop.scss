@@ -1,0 +1,410 @@
+@use './variables';
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.primary-title {
+  font-size: 4.4rem;
+  font-weight: 900;
+  color: variables.$primary-text-color;
+  margin: 0;
+}
+
+.secondary-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: variables.$tertiary-text-color;
+}
+
+.primary-para,
+.bg-button {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: variables.$secondary-text-color;
+  margin-bottom: 0;
+}
+
+.pink-mood {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FF3998;
+}
+
+.bg-button {
+  position: relative;
+  padding: 10px 25px;
+  margin-top: 18px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.orange-color {
+  color: #FF8139;
+}
+
+.gray-color {
+  color: variables.$quinary-text-color;
+}
+
+.bg-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #FF3998, #FF8139, #FF3939) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+header {
+  margin-top: 31px;
+}
+
+header .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .content-wrapper .responsive-nav {
+  display: none;
+}
+
+header .content-wrapper nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 13px;
+}
+
+header .content-wrapper nav ul li {
+  display: flex;
+}
+
+header .content-wrapper nav ul li:last-child {
+  padding-right: 0;
+}
+
+header .content-wrapper nav ul li:not(:last-child) a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: variables.$secondary-text-color;
+  text-transform: none;
+}
+
+header .content-wrapper nav ul li:last-child a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: none;
+  padding-bottom: 0;
+  letter-spacing: normal;
+}
+
+header .hero-section {
+  background-image: url(../img/hero-image.png), url(../img/hero-graphic.svg);
+  background-size: contain, contain;
+  background-repeat: no-repeat;
+  background-position: right 72px center, right 45px center;
+  display: flex;
+  margin-top: 83px;
+}
+
+header .hero-section .text-block {
+  width: 43%;
+}
+
+header .hero-section .text-block .reminder,
+section.newsletter .text-block .reminder {
+  padding-bottom: 10px;
+}
+
+section.sign-up {
+  margin-top: 83px;
+}
+
+section.sign-up .content-wrapper {
+  background: rgb(255, 57, 152);
+  background: linear-gradient(45deg, rgba(255, 57, 152, 1) 1%, rgba(255, 57, 57, 1) 27%, rgba(255, 129, 57, 1) 75%, rgba(57, 255, 160, 1) 100%);
+  padding: 70px 30px 30px;
+  border-radius: 7px;
+}
+
+section.sign-up .content-wrapper p {
+  color: variables.$tertiary-text-color;
+}
+
+section.partners {
+  margin-top: 57px;
+}
+
+section.partners .partner-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.collection hr,
+section.newsletter hr {
+  margin-top: 55px;
+  border: 1px solid variables.$quaternary-text-color;
+}
+
+section {
+  &.collection {
+    overflow: hidden;
+    margin-top: 53px;
+
+    & .secondary-title {
+      color: #ffffff;
+    }
+
+    & .primary-para {
+      color: variables.$quaternary-text-color;
+    }
+
+    & span.underline {
+      position: relative;
+    }
+
+    & span.underline::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5px 19.35px;
+      border-bottom: 1px solid variables.$quaternary-text-color;
+    }
+
+    & .collection-list {
+      margin-top: 25px;
+      display: flex;
+      gap: 13px;
+
+      & .collection-list-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 127px 1fr;
+        justify-content: center;
+        width: 140px;
+        flex-shrink: 0;
+
+        &:nth-of-type(2n)>.item-image {
+          background-color: variables.$quaternary-text-color;
+        }
+
+        & .item-image {
+          display: flex;
+          justify-content: center;
+          padding-top: 5px;
+          border-top-right-radius: 7.3px;
+          border-top-left-radius: 7.3px;
+          background-color: variables.$quinary-text-color;
+
+          & img {
+            object-fit: contain;
+          }
+        }
+
+        & .item-properties {
+          display: grid;
+          grid-template-rows: 1fr;
+          gap: 6px;
+          padding: 10px;
+          border-bottom-right-radius: 7.3px;
+          border-bottom-left-radius: 7.3px;
+          background-color: #000000;
+
+          & .row-1,
+          .row-2,
+          .row-3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & span {
+              font-size: 0.6rem;
+            }
+          }
+
+          & .row-2 {
+            & span {
+              position: relative;
+              font-size: 0.9rem;
+              color: #ffffff;
+
+              &.upper-letters {
+                text-transform: uppercase;
+              }
+
+              &.bid-price::before {
+                content: "";
+                position: absolute;
+                background-image: url(../img/eth.svg);
+                background-size: 7px 11px;
+                width: 7px;
+                height: 11px;
+                left: -9px;
+              }
+            }
+          }
+
+          & .row-3 {
+            font-size: 0.8rem;
+            color: variables.$quinary-text-color;
+          }
+        }
+      }
+
+      & .col-1,
+      .col-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
+
+section {
+  &.newsletter {
+    margin-top: 53px;
+
+    & .container {
+      background-image: url(../img/nft-4.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right 72px center;
+    }
+
+    & .text-block {
+      width: 43%;
+
+      & .secondary-title {
+        font-size: 2.4rem;
+        font-weight: 900;
+        color: #ffffff;
+        margin: 0;
+      }
+    }
+  }
+}
+
+footer {
+  margin: 53px 0 33px 0;
+
+  & .content-wrapper {
+    display: flex;
+
+    & .col-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+      width: 50%;
+
+      & .row-1 {
+        & a {
+          &.logo {
+            display: flex;
+          }
+        }
+
+        & p {
+          &.primary-para {
+            margin: 14px 0 4px 0;
+          }
+        }
+
+        & .social-links {
+          & ul {
+            display: flex;
+            align-items: flex-start;
+            gap: 7px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+
+      & .row-2 {
+        p {
+          &.primary-para {
+            color: variables.$quinary-text-color;
+          }
+        }
+      }
+    }
+
+    & .col-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+
+      & .row-1 {
+        display: flex;
+        justify-content: space-around;
+
+        & .col {
+          display: flex;
+          flex-direction: column;
+          gap: 13px;
+
+          & h3 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: variables.$secondary-text-color;
+            margin: 0;
+          }
+
+          & ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            & li a {
+              font-size: 0.9rem;
+              text-decoration: none;
+              color: variables.$secondary-text-color;
+            }
+          }
+        }
+      }
+
+      & .row-2 {
+        display: flex;
+        justify-content: flex-end;
+
+        & p {
+          &.primary-para {
+            color: variables.$quinary-text-color;
+
+            &::before {
+              display: none;
+              content: '© Copyright 2022 NFTlanding';
+            }
+
+            &::after {
+              display: block;
+              content: 'Launching August 2022';
+            }
+          }
+        }
+      }
+    }
+  }
+}

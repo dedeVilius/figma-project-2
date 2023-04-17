@@ -1,0 +1,19 @@
+@use './variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  background-color: variables.$tertiary-text-color;
+  margin: 0;
+  zoom: 130%;
+}
